@@ -1,0 +1,152 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bgr"
+    android:textColor="@color/black_1" >
+
+    <TableLayout
+        android:id="@+id/tablelayout01"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:collapseColumns="3"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="20dp"
+         >
+
+       
+
+            <TextView
+                android:id="@+id/textview01"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="用户名称" />
+
+            <EditText
+                android:id="@+id/username"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/login_edit_bg"
+                android:drawableLeft="@drawable/login_user"
+                android:text="" />
+        
+
+        
+            
+
+            <TextView
+                android:id="@+id/textview02"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="用户密码" />
+
+            <EditText
+                android:id="@+id/password"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/login_edit_bg"
+                android:drawableLeft="@drawable/login_pwd"
+                android:inputType="textPassword" />
+       
+
+        
+            
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="真实姓名" />
+
+            <EditText
+                android:id="@+id/realname"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/login_edit_bg"
+                android:drawableLeft="@drawable/login_user"
+                android:text="" />
+        
+
+        
+            
+
+            <TextView
+                android:id="@+id/textviewsex"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="性别" />
+
+            <RadioGroup
+                android:id="@+id/gender_g"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <RadioButton
+                    android:id="@+id/male"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="男" />
+
+                <RadioButton
+                    android:id="@+id/female"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="女" />
+            </RadioGroup>
+       
+
+        
+
+            <TextView
+                android:id="@+id/age1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="年龄" />
+
+            <EditText
+                android:id="@+id/age"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/login_edit_bg" />
+       
+
+       
+
+            <TextView
+                android:id="@+id/school1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="学校" />
+
+            <Spinner
+                android:id="@+id/school"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        
+
+     <TableRow 
+         android:id="@+id/sd"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+         >  
+
+            <Button
+                android:id="@+id/cancle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="取消 " >
+            </Button>
+
+            <Button
+                android:id="@+id/register"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="注册 " >
+            </Button>
+            </TableRow> 
+        
+    </TableLayout>
+
+</LinearLayout>

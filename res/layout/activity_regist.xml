@@ -1,0 +1,136 @@
+
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+       android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    
+    
+    tools:context="com.example.dict.MainActivity$PlaceholderFragment" >
+    
+        <TableLayout
+            android:id="@+id/userlogin"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="26dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:paddingTop="10dp"
+            android:stretchColumns="1"
+            android:visibility="visible" >
+
+            <ImageView
+                android:id="@+id/imageView1"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_alignTop="@+id/userlogin"
+                android:layout_centerHorizontal="true"
+                android:layout_weight="1.03"
+                android:src="@drawable/center" />
+
+            <TableRow>
+
+                <TextView
+                    android:id="@+id/T"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" >
+                </TextView>
+            </TableRow>
+
+            <TableRow android:paddingTop="20dp" >
+
+                <TextView
+                    android:id="@+id/TextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    
+                    android:text="用户名: " >
+                </TextView>
+
+                <EditText
+                    android:id="@+id/useremail"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:background="@drawable/login_edit_bg"
+                    android:drawableLeft="@drawable/login_user"
+                    android:hint="请输入邮箱" >
+                </EditText>
+            </TableRow>
+
+            <TableRow android:paddingTop="15dp" >
+
+                <TextView
+                    android:id="@+id/TextView1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    
+                    android:text="密码: " >
+                </TextView>
+
+                <EditText
+                    android:id="@+id/pwd"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:background="@drawable/login_edit_bg"
+                    android:hint="请输入密码"
+                     android:drawableLeft="@drawable/login_pwd"
+                    android:password="true" >
+                </EditText>
+            </TableRow>
+             <TableRow android:paddingTop="15dp" >
+
+                <TextView
+                    android:id="@+id/TextView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    
+                    android:text="确认密码: " >
+                </TextView>
+
+                <EditText
+                    android:id="@+id/repwd"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:background="@drawable/login_edit_bg"
+                    android:hint="请确认密码"
+                     android:drawableLeft="@drawable/login_pwd"
+                    android:password="true" >
+                </EditText>
+            </TableRow>
+            
+
+            <Button
+                android:id="@+id/next"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/login_button_bg" 
+                android:text="下一步" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="3dp"
+                 >
+
+                <TextView
+                    android:id="@+id/question"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    
+                    android:text="注册遇到问题？"
+                    android:textColor="#2894ff" />
+
+                <TextView
+                    android:id="@+id/connect"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:text="联系我们 "
+                    android:textColor="#2894ff" />
+            </LinearLayout>
+        </TableLayout>
+
+</RelativeLayout>

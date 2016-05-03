@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bgr"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_marginTop="45dp"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_weight="0.00"
+        
+        android:gravity="center"
+        android:text="请选择你的身份注册" />
+    <TableLayout 
+        android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="36dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:paddingTop="20dp"
+            android:stretchColumns="1"
+            android:visibility="visible"
+            
+        >
+        
+            
+            
+            
+      <Button
+        android:id="@+id/btnstu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.00"
+        android:text="学生" />
+
+    <Button
+        android:id="@+id/btntea"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="0.77"
+        android:text="教师" />
+       
+        
+    </TableLayout>
+
+    
+
+</LinearLayout>
