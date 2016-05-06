@@ -13,7 +13,7 @@ import android.widget.RadioGroup.OnCheckedChangeListener;
 import android.widget.TabHost;
 import android.widget.TextView;
 
-public class ContentActivity extends TabActivity {
+public class sContentActivity extends TabActivity {
     /** Called when the activity is first created. */
 	private TabHost tabHost;
 	private TextView main_tab_new_message;
@@ -32,7 +32,7 @@ public class ContentActivity extends TabActivity {
         TabHost.TabSpec spec;
         Intent intent;
 
-        intent=new Intent().setClass(this, Index_teacher.class);
+        intent=new Intent().setClass(this, Index_student.class);
         spec=tabHost.newTabSpec("Ê×Ò³").setIndicator("Ê×Ò³").setContent(intent);
         tabHost.addTab(spec);
         

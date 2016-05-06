@@ -2,7 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bgr"
+    android:background="@drawable/start"
     android:textColor="@color/black_1" >
 
     <TableLayout
@@ -11,7 +11,7 @@
         android:layout_height="wrap_content"
         android:collapseColumns="3"
          android:layout_marginLeft="20dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="110dp"
         android:layout_marginRight="20dp"
         android:layout_marginBottom="20dp">
 
@@ -21,15 +21,15 @@
                 android:id="@+id/textview01"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="用户名称" />
+                android:text="单词" />
 
             <EditText
-                android:id="@+id/Susername"
+                android:id="@+id/insertword"
                 android:layout_width="fill_parent"
                 android:layout_height="35dp"
-                android:drawableLeft="@drawable/login_user"
+                
                 android:background="@drawable/login_edit_bg"
-                android:hint="请输入用户名"
+                android:hint="请输入单词"
                 android:text="" />
         
 
@@ -39,16 +39,16 @@
                 android:id="@+id/textview02"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="用户密码" />
+                android:text="解析" />
 
             <EditText
-                android:id="@+id/Spassword"
+                android:id="@+id/insertdetails"
                 android:layout_width="fill_parent"
                 android:layout_height="35dp"
                 android:inputType="textPassword"
-                android:drawableLeft="@drawable/login_pwd"
+               
                 android:background="@drawable/login_edit_bg"
-                 android:hint="请输入密码"
+                 android:hint="请输入解析"
                 android:text="" />
         
         
@@ -56,42 +56,18 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="真实姓名" />
+                android:text="例句" />
 
             <EditText
-                android:id="@+id/Srealname"
+                android:id="@+id/insertsentence"
                 android:layout_width="fill_parent"
-                android:layout_height="35dp"
+                android:layout_height="55dp"
                 android:background="@drawable/login_edit_bg"
-                android:drawableLeft="@drawable/login_user"
-                 android:hint="请输入真实姓名"
-                android:text="" />
-        
+                
+                 android:hint="请输入例句（可以不填）"
+                />
 
-            <TextView
-                android:id="@+id/textviewsex"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="性别" />
-
-            <RadioGroup
-                android:id="@+id/gender_g"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal" >
-
-                <RadioButton
-                    android:id="@+id/Smale"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="男" />
-
-                <RadioButton
-                    android:id="@+id/Sfemale"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="女" />
-            </RadioGroup>
+           
        
 
         
@@ -100,64 +76,33 @@
                 android:id="@+id/age"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="年龄" />
+                android:text="翻译" />
 
             <EditText
-                android:id="@+id/Sage"
+                android:id="@+id/fanyi"
                android:layout_width="fill_parent"
                 android:layout_height="35dp"
                 android:background="@drawable/login_edit_bg"
-                android:hint="请输入年龄"
+                android:hint="请输入例句翻译"
                  />
-        
-
-        
-
-        
-
             <TextView
                 android:id="@+id/school1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="学校" />
+                android:text="单元 " />
 
             <Spinner
-                android:id="@+id/school"
+                android:id="@+id/insertunit"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
             
-        
-        
-
-            <TextView
-                android:id="@+id/school1ll"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="年级" />
-
-            <Spinner
-                android:id="@+id/ygrade"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
-            
-        
-
-            <TextView
-                android:id="@+id/school1l"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="班级" />
-
-            <Spinner
-                android:id="@+id/grade"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
             
         
          <TableRow 
          android:id="@+id/sd"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
                 android:gravity="center"
          >  
             
@@ -173,7 +118,7 @@
                 android:id="@+id/Sregister"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="注册 " >
+                android:text="添加" >
             </Button>
        </TableRow>
     </TableLayout>

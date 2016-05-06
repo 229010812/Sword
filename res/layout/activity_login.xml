@@ -5,7 +5,7 @@
        android:id="@+id/container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    
+    android:background="@drawable/start"
     
     tools:context="com.example.dict.MainActivity$PlaceholderFragment" >
     
@@ -22,14 +22,18 @@
             
             >
 
-            <ImageView
+            <TextView
                 android:id="@+id/imageView1"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                
+                android:layout_marginTop="100dp"
+                android:layout_marginLeft="120dp"
                 android:layout_alignTop="@+id/userlogin"
                 android:layout_centerHorizontal="true"
-                android:layout_weight="1.03"
-                android:src="@drawable/center" />
+                android:textSize="40dp"
+                android:text="Sword"
+                 />
 
             <TableRow>
 

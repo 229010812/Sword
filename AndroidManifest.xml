@@ -30,7 +30,13 @@
         </activity>
         <activity android:name="com.example.sword.ContentActivity" >
         </activity>
-        <activity android:name="com.example.sword.Index" >
+        <activity android:name="com.example.sword.sContentActivity" >
+        </activity>
+        <activity android:name="com.example.sword.Index_student" >
+        </activity>
+        <activity android:name="com.example.sword.Index_teacher" >
+        </activity>
+        <activity android:name="com.example.sword.Index_insert_word" >
         </activity>
         <activity android:name="com.example.sword.Word" >
         </activity>

@@ -50,12 +50,7 @@ public class Login extends Activity implements OnClickListener {
 		register.setOnClickListener(this);
 	}
 
-	public boolean isEmail(String userEditText) {
-		String str = "^([a-zA-Z0-9_\\-\\.]+)@((\\[[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\.)|(([a-zA-Z0-9\\-]+\\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\\]?)$";
-		Pattern p = Pattern.compile(str);
-		Matcher m = p.matcher(userEditText);
-		return m.matches();
-	}
+	
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
@@ -102,7 +97,7 @@ public class Login extends Activity implements OnClickListener {
 			t.setPassword(pwd);
 			Cursor c = dao.queryTeacherBy(t);
 			if (c.getCount() > 0) {
-				Toast.makeText(getApplication(), "登录成功laoshi",
+				Toast.makeText(getApplication(), "教师登录成功",
 						Toast.LENGTH_LONG).show();
 				// saveLoinginfor();
 				Intent intent = new Intent();
@@ -119,11 +114,11 @@ public class Login extends Activity implements OnClickListener {
 			Cursor c = dao.queryStudentBy(s);
 
 			if (c.getCount() > 0) {
-				Toast.makeText(getApplication(), "登录成功", Toast.LENGTH_LONG)
+				Toast.makeText(getApplication(), "恭喜登录成功", Toast.LENGTH_LONG)
 						.show();
 				// saveLoinginfor();
 				Intent intent = new Intent();
-				intent.setClass(Login.this, ContentActivity.class);
+				intent.setClass(Login.this, sContentActivity.class);
 				startActivity(intent);
 			} else
 				Toast.makeText(getApplication(), "登录失败，用户名或密码不正确！",
