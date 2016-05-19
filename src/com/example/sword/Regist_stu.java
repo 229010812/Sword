@@ -1,6 +1,6 @@
 package com.example.sword;
 
-import com.exampie.dao.impl.UserDaoImpl;
+import com.example.dao.impl.UserDaoImpl;
 import com.example.entity.Student;
 
 import android.app.Activity;
@@ -25,7 +25,7 @@ public class Regist_stu extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_regist_student);
+		setContentView(R.layout.regist_student);
 		Susername = (EditText) findViewById(R.id.Susername);
 		Spassword = (EditText) findViewById(R.id.Spassword);
 		Srealname = (EditText) findViewById(R.id.Srealname);

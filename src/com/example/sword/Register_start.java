@@ -13,7 +13,7 @@ public class Register_start extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_regist_start);
+		setContentView(R.layout.regist_start);
 		btnstu=(Button) findViewById(R.id.btnstu);
 		btntea=(Button) findViewById(R.id.btntea);
 		btntea.setOnClickListener(new OnClickListener() {

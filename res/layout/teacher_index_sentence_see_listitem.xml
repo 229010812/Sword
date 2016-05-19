@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_gravity="center_vertical" >
+    
+    <TextView
+        android:id="@+id/textid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingRight="10px"
+        android:textColor="#000000" 
+        android:drawableLeft="@drawable/login_user"
+        />
+
+    <TextView
+        android:id="@+id/sentextword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingRight="10px"
+        android:textColor="#000000" />
+
+    <TextView
+        android:id="@+id/sentextdetail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingRight="10px"
+        android:textColor="#000000" />
+
+    <TextView
+        android:id="@+id/sentextsemester"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingRight="10px"
+        android:textColor="#000000" />
+
+    <TextView
+        android:id="@+id/sentextunit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingRight="10px"
+        android:textColor="#000000" />
+
+    <TextView
+        android:id="@+id/sentextnote"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingRight="10px"
+        android:textColor="#000000" />
+    
+</LinearLayout>

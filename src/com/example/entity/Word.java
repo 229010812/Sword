@@ -16,7 +16,7 @@ public class Word {
 	// 录入时间inputtime
 	private String inputtime;
 	// 录入教师ID tid
-	private String tid;
+	private int tid;
 	// 备注note
 	private String note;
 
@@ -76,12 +76,12 @@ public class Word {
 		this.inputtime = inputtime;
 	}
 
-	public String getTid() {
+	public int getTid() {
 		return tid;
 	}
 
-	public void setTid(String tid) {
-		this.tid = tid;
+	public void setTid(int i) {
+		this.tid = i;
 	}
 
 	public String getNote() {

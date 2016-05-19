@@ -2,8 +2,8 @@ package com.example.sword;
 
 
 
-import com.exampie.dao.impl.UserDaoImpl;
 import com.example.dao.UserDao;
+import com.example.dao.impl.UserDaoImpl;
 import com.example.entity.Student;
 import com.example.entity.Teacher;
 import com.example.sword.R.id;
@@ -32,7 +32,7 @@ public class Regist_tea extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_regist_teacher);
+		setContentView(R.layout.regist_teacher);
 		username=(EditText) findViewById(R.id.username);
 		password=(EditText) findViewById(R.id.password);
 		realname=(EditText) findViewById(R.id.realname);
@@ -58,6 +58,7 @@ public class Regist_tea extends Activity {
 				t.setPassword(password.getText().toString());
 				t.setName(realname.getText().toString());
 				t.setAge(age.getText().toString());
+				t.setCheck("u");
 				if (male.isChecked()) {
 					t.setGender("ÄÐ");
 

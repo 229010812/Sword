@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bgr"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_marginTop="45dp"
+        android:layout_weight="0.00"
+        android:gravity="center"
+        android:text="请选择你要进行的操作" />
+
+    <TableLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:paddingTop="20dp"
+        android:stretchColumns="1"
+        android:visibility="visible" >
+
+        <Button
+            android:id="@+id/school_insert"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.00"
+            android:text="学校添加" />
+
+        <Button
+            android:id="@+id/teacher_check"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="0.77"
+            android:text="老师审核" />
+        <Button
+            android:id="@+id/Administration_user"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="0.77"
+            android:text="管理用户" />
+    </TableLayout>
+
+</LinearLayout>

@@ -5,10 +5,12 @@ import java.util.Date;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import com.exampie.dao.impl.UserDaoImpl;
+import com.example.dao.impl.UserDaoImpl;
 import com.example.entity.Student;
 import com.example.entity.Teacher;
 import com.example.sword.*;
+import com.example.sword.student.Student_content;
+import com.example.sword.teacher.Teacher_content;
 
 import android.os.Bundle;
 import android.app.Activity;
@@ -18,6 +20,7 @@ import android.database.Cursor;
 import android.view.Menu;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.view.Window;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
@@ -25,23 +28,26 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class Login extends Activity implements OnClickListener {
-	UserDBHelper dbhelper;
+
 	SharedPreferences preferences;
 	SharedPreferences.Editor editor;
 	int count = 0;
 	private EditText userEditText, pwdEditText;
-	private RadioButton tearadio;
+	private RadioButton tearadio, sturadio, adminradio;
 	private TextView register, about;
 	private Button login;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
-		dbhelper = new UserDBHelper(this);
+
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_login);
+		//this.requestWindowFeature(Window.FEATURE_CUSTOM_TITLE);//去掉标题栏
+		setContentView(R.layout.login);
 		userEditText = (EditText) findViewById(R.id.userEditText);
 		pwdEditText = (EditText) findViewById(R.id.pwdEditText);
 		tearadio = (RadioButton) findViewById(R.id.tearadios);
+		sturadio = (RadioButton) findViewById(R.id.sturadio);
+		adminradio = (RadioButton) findViewById(R.id.adminradio);
 		register = (TextView) findViewById(R.id.register);
 		about = (TextView) findViewById(R.id.about);
 		login = (Button) findViewById(R.id.login);
@@ -50,14 +56,12 @@ public class Login extends Activity implements OnClickListener {
 		register.setOnClickListener(this);
 	}
 
-	
-
-	@Override
-	public boolean onCreateOptionsMenu(Menu menu) {
-		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.login, menu);
-		return true;
-	}
+//	@Override
+//	public boolean onCreateOptionsMenu(Menu menu) {
+//		// Inflate the menu; this adds items to the action bar if it is present.
+//		getMenuInflater().inflate(R.menu.login, menu);
+//		return true;
+//	}
 
 	@Override
 	public void onClick(View arg0) {
@@ -97,17 +101,17 @@ public class Login extends Activity implements OnClickListener {
 			t.setPassword(pwd);
 			Cursor c = dao.queryTeacherBy(t);
 			if (c.getCount() > 0) {
-				Toast.makeText(getApplication(), "教师登录成功",
-						Toast.LENGTH_LONG).show();
-				// saveLoinginfor();
+				Toast.makeText(getApplication(), "教师登录成功", Toast.LENGTH_LONG)
+						.show();
+				 saveLoinginfor();
 				Intent intent = new Intent();
-				intent.setClass(Login.this, ContentActivity.class);
+				intent.setClass(Login.this, Teacher_content.class);
 				startActivity(intent);
 			} else
 				Toast.makeText(getApplication(), "登录失败，用户名或密码不正确！",
 						Toast.LENGTH_LONG).show();
 
-		} else {
+		} else if (sturadio.isChecked()) {
 			Student s = new Student();
 			s.setAccount(user);
 			s.setPassword(pwd);
@@ -118,7 +122,24 @@ public class Login extends Activity implements OnClickListener {
 						.show();
 				// saveLoinginfor();
 				Intent intent = new Intent();
-				intent.setClass(Login.this, sContentActivity.class);
+				intent.setClass(Login.this, Student_content.class);
+				startActivity(intent);
+			} else
+				Toast.makeText(getApplication(), "登录失败，用户名或密码不正确！",
+						Toast.LENGTH_LONG).show();
+
+		} else if (adminradio.isChecked()) {
+			Student s = new Student();
+			s.setAccount(user);
+			s.setPassword(pwd);
+			Cursor c = dao.queryStudentBy(s);
+
+			if (user.equals("admin")&&pwd.equals("123")) {
+				Toast.makeText(getApplication(), "恭喜登录成功", Toast.LENGTH_LONG)
+						.show();
+				// saveLoinginfor();
+				Intent intent = new Intent();
+				intent.setClass(Login.this, Student_content.class);
 				startActivity(intent);
 			} else
 				Toast.makeText(getApplication(), "登录失败，用户名或密码不正确！",
@@ -127,23 +148,10 @@ public class Login extends Activity implements OnClickListener {
 		}
 	}
 
-	// 跳转到register页面
-	private void intRegister() {
+	private void saveLoinginfor() {
 		// TODO Auto-generated method stub
-		Intent intent1 = new Intent();
-		intent1.setClass(this, Register.class);
-		startActivity(intent1);
-	}
-
-	void saveLoinginfor() {
-		// 写入用户登录的时间与次数
-		SimpleDateFormat sdf = new SimpleDateFormat("yyyy年MM月dd日" + "hh:mm:ss");
-		editor.putString("time", sdf.format(new Date()));
-		editor.putString("username", userEditText.getText().toString());
-		count = preferences.getInt("count", 0);
-		editor.putInt("count", ++count);
-		editor.commit();
-
+		Teacher t = new Teacher();
+		
 	}
 
 }

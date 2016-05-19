@@ -15,6 +15,14 @@ public class Teacher {
 		private String age;
 		// Ñ§Ð£
 		private String school;
+		//ÉóºË×´Ì¬
+		private String check;
+		public String getCheck() {
+			return check;
+		}
+		public void setCheck(String check) {
+			this.check = check;
+		}
 		public int getId() {
 			return id;
 		}

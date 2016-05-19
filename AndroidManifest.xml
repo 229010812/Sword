@@ -16,41 +16,58 @@
         <activity
             android:name="com.example.sword.Login"
             android:label="@string/app_name" >
-           <intent-filter>
+            <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>  
+            </intent-filter>
         </activity>
         <activity
-            android:name="com.example.sword.About"
-            android:theme="@style/style_window" >
+            android:name="com.example.sword.About">
+            <!--android:theme="@style/style_window" -->
         </activity>
         <activity android:name="com.example.sword.Register" >
-        </activity>
-        <activity android:name="com.example.sword.ContentActivity" >
-        </activity>
-        <activity android:name="com.example.sword.sContentActivity" >
-        </activity>
-        <activity android:name="com.example.sword.Index_student" >
-        </activity>
-        <activity android:name="com.example.sword.Index_teacher" >
-        </activity>
-        <activity android:name="com.example.sword.Index_insert_word" >
-        </activity>
-        <activity android:name="com.example.sword.Word" >
-        </activity>
-        <activity android:name="com.example.sword.My" >
-        </activity>
-        <activity android:name="com.example.sword.Setting" >
         </activity>
         <activity android:name="com.example.sword.Regist_stu" >
         </activity>
         <activity android:name="com.example.sword.Regist_tea" >
         </activity>
-        <activity android:name="com.example.sword.Register_start" 
-            >
-           
+        <activity android:name="com.example.sword.Register_start" >
+        </activity>
+        老师
+        <activity android:name="com.example.sword.teacher.Teacher_content" >
+        </activity>
+        <activity android:name="com.example.sword.teacher.Teacher_index" >
+        </activity>
+        <activity android:name="com.example.sword.teacher.Teacher_index_word_see" >
+        </activity>
+        <activity android:name="com.example.sword.teacher.Teacher_index_word_insert" >
+        </activity>
+        <activity android:name="com.example.sword.teacher.Teacher_index_sentence_see" >
+        </activity>
+        <activity android:name="com.example.sword.teacher.Teacher_index_sentence_insert" >
+        </activity>
+        <activity android:name="com.example.sword.teacher.Teacher_word" >
+        </activity>
+        <activity android:name="com.example.sword.teacher.Teacher_my" >
+        </activity>
+        <activity android:name="com.example.sword.teacher.Teacher_setting" >
+        </activity>
+          学生
+        <activity android:name="com.example.sword.student.Student_content" >
+        </activity>
+        <activity android:name="com.example.sword.student.Student_index" >
+        </activity>
+        <activity android:name="com.example.sword.student.Student_word" >
+        </activity>
+        <activity android:name="com.example.sword.student.Student_my" >
+        </activity>
+        <activity android:name="com.example.sword.student.Student_setting" >
+        </activity>
+          管理员
+        <activity android:name="com.example.sword.admin.Admin_content" >
+        </activity>
+        <activity android:name="com.example.sword.admin.Admin_content_teacher_check" >
         </activity>
     </application>
 

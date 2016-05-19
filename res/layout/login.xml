@@ -1,0 +1,144 @@
+
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+       android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/yellow1"
+    
+    tools:context="com.example.dict.MainActivity$PlaceholderFragment" >
+    
+        <TableLayout
+            android:id="@+id/userlogin"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="36dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:paddingTop="20dp"
+            android:stretchColumns="1"
+            android:visibility="visible" 
+            
+            >
+
+            <TextView
+                android:id="@+id/imageView1"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                
+                android:layout_marginTop="100dp"
+                android:layout_marginLeft="120dp"
+                android:layout_alignTop="@+id/userlogin"
+                android:layout_centerHorizontal="true"
+                android:textSize="40dp"
+                android:text="Sword"
+                 />
+
+            <TableRow>
+
+                <TextView
+                    android:id="@+id/T"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" >
+                </TextView>
+            </TableRow>
+
+            <TableRow android:paddingTop="20dp" >
+
+                <TextView
+                    android:id="@+id/TextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    
+                    android:text="用户名: " >
+                </TextView>
+
+                <EditText
+                    android:id="@+id/userEditText"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:background="@drawable/login_edit_bg"
+                    android:drawableLeft="@drawable/login_user"
+                    android:hint="请输入邮箱" >
+                </EditText>
+            </TableRow>
+
+            <TableRow android:paddingTop="15dp" >
+
+                <TextView
+                    android:id="@+id/TextView1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    
+                    android:text="密码: " >
+                </TextView>
+
+                <EditText
+                    android:id="@+id/pwdEditText"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:background="@drawable/login_edit_bg"
+                    android:hint="请输入密码"
+                     android:drawableLeft="@drawable/login_pwd"
+                    android:password="true" >
+                </EditText>
+            </TableRow>
+            <RadioGroup
+                android:id="@+id/gender_g"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <RadioButton
+                    android:id="@+id/tearadios"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="教师" />
+
+                <RadioButton
+                    android:id="@+id/sturadio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="学生" />
+                <RadioButton
+                    android:id="@+id/adminradio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="管理员" />
+            </RadioGroup>
+
+            <Button
+                android:id="@+id/login"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/login_button_bg" 
+                android:text="登录" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="3dp"
+                 >
+
+                <TextView
+                    android:id="@+id/register"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    
+                    android:text="新用户注册"
+                    android:textColor="#2894ff" />
+
+                <TextView
+                    android:id="@+id/about"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:text="关于 我们"
+                    android:textColor="#2894ff" />
+            </LinearLayout>
+        </TableLayout>
+
+</RelativeLayout>
